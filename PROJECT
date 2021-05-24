@@ -1,5 +1,6 @@
 We are making an application that will allow people to register to the beauty store hence joining the community of Ayesha Beauty Creation. The application will help customers to talk to the business employees on the different ideas they have on what could be used as ingredients to beauty products thus increasing customer intimacy. The app will also allow the customers to comuncicate to each other  and discuss.In addition, the customers will be able to place orders and pay online.
 
+FUNCTIONS
 LOGIN()
  
 STEP 1: Start
@@ -23,3 +24,216 @@ STEP 9: CREATE NEW ACCOUNT AND STORE DETAILS IN DATABASE
 STEP 10: SEND LOGIN LINK TO EMAIL ADDRESS AND GOTO STEP 3
  
 STEP 11: Stop
+
+
+
+
+CHECKOUT()
+ 
+STEP 1: Start
+ 
+STEP 2: FINALISE PRODUCTS
+ 
+STEP 3: INPUT local_adrs, pin, cntry, cntct_no
+ 
+STEP 4: IF pin, cntry, cntct_no ARE NOT VERIFIED THEN GOTO STEP 3
+ 
+STEP 5: IF MODE OF PAYMENT IS CARD THEN DO STEP 6 AND GOTO STEP 11 ELSE GOTO STEP 7
+ 
+STEP 6: INPUT card_name, cardno, cvc, exp_date, pin
+ 
+STEP 7: IF MODE OF PAYMENT IS VIA PAYPAL THEN DO STEP 8 AND GOTO STEP 11 ELSE GOTO STEP 9
+ 
+STEP 8: INPUT paypal_id, paypal_pass
+ 
+STEP 9: IF MODE OF PAYMENT IS COUPONS THEN GOTO STEP 10
+ 
+STEP 10: INPUT coupon_no, coupon_name
+ 
+STEP 11: IF DETAILS NOT VERIFIED THEN GOTO STEP 5STEP 12: CUNDUCT TRANSACTION
+ 
+STEP 13: SEND CUSTOMER TRANSACTION DETAILS VIA EMAIL
+ 
+STEP 14: Stop
+ 
+
+
+
+MAIN
+ 
+step 1: Start
+ 
+step 2: Goto PRODUCT_SEARCH()
+ 
+STEP 5: GET PRODUCT
+ 
+STEP 6: STOP
+
+
+
+ 
+PRODUCT_SEARCH()
+ 
+STEP 1: Start
+ 
+STEP 2: INPUT Product_name
+ 
+STEP 3: SEARCH FOR PRODUCT
+ 
+STEP 4: IF PRODUCT FOUND GOTO STEP 5 ELSE GOTO STEP 2
+ 
+STEP 5: OUTPUT Product_name, modelno, price, stock
+ 
+STEP 6: IF stock NOT EQUAL TO ZERO and PURCHASE IS FEASIBLE THEN DO STEP 7 & 8 ELSE DO STEP 8
+ 
+STEP 7: ADD PRODUCT TO CART
+ 
+STEP 8: REPEAT STEP 2 TO STEP 7 AS THE CUSTOMER REQUIRES IF NOT GOTO LOGIN()
+ 
+STEP 9: Stop
+
+
+PSEUDOCODE
+LOGIN()Begin
+ 
+Varchar EMAIL_ID, ID, PASS, NAME, DOB, AGE, ADDRESS, MOOBILENO
+ 
+If customer has account
+ 
+E:
+ 
+Read ID, PASS
+ 
+If ID==LOGIN_ID AND PASS==LOGIN_PASS
+ 
+CHECKOUT()
+ 
+Else
+ 
+Read EMAIL_ID
+ 
+If EMAIL_ID present in database
+ 
+Send LOGIN_PASS to Email address
+ 
+Goto E
+ 
+End if 
+ 
+End if 
+ 
+Else
+ 
+G:
+ 
+Read NAME, DOB, AGE, ADDRESS, MOOBILENO, LOGIN_ID, LOGIN_PASS, EMAIL_ID
+ 
+If LOGIN_ID already present in database
+ 
+Goto G
+ 
+Else
+ 
+Create new account and store details in database
+ 
+Email Login link
+ 
+Goto E
+ 
+End if 
+ 
+End if 
+ 
+End
+ 
+CHECKOUT()
+ 
+BeginFinalise Products
+ 
+I:
+ 
+Read LOCAL_ADRS, PINCODE, CNTRY, CONTACT_NO
+ 
+If PIN, CNTRY, CONTACT_NO ARE VERIFIED
+ 
+H:
+ 
+If mode of payment is CARD
+ 
+Read CARD_NO, CARD_NAME, CVC, EXP_DATE, PIN
+ 
+Else if mode of payment is PAYPAL
+ 
+Read PAYPAL_ID, PAYPAL_PASS
+ 
+Else if mode of payment is COUPONS
+ 
+Read COUPON_NO, COUPON_NAME
+ 
+End else if 
+ 
+If details veried
+ 
+Conduct Transacon
+ 
+Email Customer transaction details
+ 
+Elsegoto H
+ 
+Else
+ 
+Goto I
+
+End
+
+
+MAIN
+Begin
+ 
+PRODUCT_SEARCH()
+ 
+Get Product
+ 
+Stop
+ 
+PRODUCT_SEARCH()
+ 
+BeginVarchar PRODUCT_NAME, CH
+ 
+F:
+ 
+do
+ 
+Write " Input Product name:"
+ 
+Read PRODUCT_NAME
+ 
+Search for Product in inventory
+ 
+If Product found
+ 
+Write PRODUCT_NAME, MODELNO, PRICE, STOCK
+ 
+If STOCK<>0 AND Purcase is feasible
+ 
+Add pproduct to cart
+ 
+End if 
+ 
+Else
+ 
+Goto F
+ 
+End if 
+ 
+Write " Add annother product?(y/n)"
+ 
+Read CH
+ 
+while(CH<>'n' OR CH<>'N')LOGIN()
+ 
+End
+ 
+LOGIN()
+
+End
