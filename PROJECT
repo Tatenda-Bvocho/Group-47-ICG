@@ -63,7 +63,7 @@ print "procceed"
 
 else
 
-IF CellphoneNumber = "---" 
+IF password = "---" 
 THEN
 print create_password
 
