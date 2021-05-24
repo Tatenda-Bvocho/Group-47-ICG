@@ -1,24 +1,25 @@
-We are making an application that will allow people to register to the beauty store Where by the following is input(Customer name, customer Id number, customer's residence, customer account number) hence joining the community of Ayesha Beauty Creation. The application will help customers to talk to the business employees on the different ideas they have on what could be used as ingredients to beauty products thus increasing customer intimacy. The app will also allow the customers to comuncicate to each other  and discuss.In addition, the customers will be able to place orders and pay online.
+We are making an application that will allow people to register to the beauty store hence joining the community of Ayesha Beauty Creation. The application will help customers to talk to the business employees on the different ideas they have on what could be used as ingredients to beauty products thus increasing customer intimacy. The app will also allow the customers to comuncicate to each other  and discuss.In addition, the customers will be able to place orders and pay online.
 
 LOGIN()
  
-Start
+STEP 1: Start
  
-IF CUSTOMER HAS AN ACCOUNT THEN GOTO STEP 3 ELSE GOTO STEP 7
+STEP 2: IF CUSTOMER HAS AN ACCOUNT THEN GOTO STEP 3 ELSE GOTO STEP 7
  
-INPUT id, pass
+STEP 3: INPUT id, pass
  
-IF id==login_id AND pass==login_pass THEN GOTO CHECKOUT ELSE DO STEP 5 AND STEP 6
+STEP 4: IF id==login_id AND pass==login_pass THEN GOTO CHECKOUT ELSE DO STEP 5 AND STEP 6
  
-INPUT email_id
+STEP 5: INPUT email_id
  
-IF email_id IS PRESENT IN DATABASE THEN SEND login_pass TO EMAIL ADDRESS THEN GOTOSTEP 3
+STEP 6: IF email_id IS PRESENT IN DATABASE THEN SEND login_pass TO EMAIL ADDRESS THEN GOTOSTEP 3
  
 STEP 7: INPUT name, dob, age, address, mobileno, login_id, login_pass, email_id
-[01:04, 5/25/2021] Tidex: STEP 8: IF login_id IS PRESENT IN DATABASE GOTO STEP 7
+
+STEP 8: IF login_id IS PRESENT IN DATABASE GOTO STEP 7
  
-CREATE NEW ACCOUNT AND STORE DETAILS IN DATABASE
+STEP 9: CREATE NEW ACCOUNT AND STORE DETAILS IN DATABASE
  
-SEND LOGIN LINK TO EMAIL ADDRESS AND GOTO STEP 3
+STEP 10: SEND LOGIN LINK TO EMAIL ADDRESS AND GOTO STEP 3
  
-Stop
+STEP 11: Stop
