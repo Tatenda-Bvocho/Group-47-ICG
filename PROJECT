@@ -69,6 +69,8 @@ print create_password
 
 endif
 
+Print"Registration Complete"
+
 }
 
 END
