@@ -1,1 +1,74 @@
 We are making an application that will allow people to register to the beauty store Where by the following is input(Customer name, customer Id number, customer's residence, customer account number) hence joining the community of Ayesha Beauty Creation. The application will help customers to talk to the business employees on the different ideas they have on what could be used as ingredients to beauty products thus increasing customer intimacy. The app will also allow the customers to comuncicate to each other  and discuss.In addition, the customers will be able to place orders and pay online.
+
+START
+
+function resgister (input) {
+
+print "enter_name"
+get name
+IF name = ‘xxxxxx’
+THEN
+print "procceed"
+
+IF name = "---" 
+THEN
+print fill_in_name
+
+endif
+
+print "enter_ID_number"
+get IdNumber
+IF name = ‘xxxxxx’
+THEN
+print "procceed"
+
+IF name = "---" 
+THEN
+print fill_in_IdNumber
+
+endif
+
+print "enter_address"
+get address
+IF address = ‘xxxxxx’
+THEN
+print "procceed"
+
+IF address = "---" 
+THEN
+print fill_in_address
+
+endif
+
+print "enter_cellphone_number"
+get CellphoneNumber
+IF cellphoneNumber = ‘xxxxxx’
+THEN
+print "procceed"
+
+else
+
+IF CellphoneNumber = "---" 
+THEN
+print fill_in_CellphoneNumber
+
+endif
+
+print "CreatePassword"
+get password
+
+IF password = ‘xxxxxx’
+THEN
+print "procceed"
+
+else
+
+IF CellphoneNumber = "---" 
+THEN
+print create_password
+
+endif
+
+}
+
+END
