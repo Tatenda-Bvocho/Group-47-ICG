@@ -28,7 +28,7 @@ STEP 9: Stop
 
 
 LOGIN()
-STEP 1: Start
+STEP 1: START
 STEP 2: IF CUSTOMER HAS AN ACCOUNT THEN GOTO STEP 3 ELSE GOTO STEP 7
 STEP 3: INPUT id, pass
 STEP 4: IF id==login_id AND pass==login_pass THEN GOTO CHECKOUT ELSE DO STEP 5 AND STEP 6
@@ -38,14 +38,14 @@ STEP 7: INPUT name, dob, age, address, mobileno, login_id, login_pass, email_id
 STEP 8: IF login_id IS PRESENT IN DATABASE GOTO STEP 7
 STEP 9: CREATE NEW ACCOUNT AND STORE DETAILS IN DATABASE
 STEP 10: SEND LOGIN LINK TO EMAIL ADDRESS AND GOTO STEP 3
-STEP 11: Stop
+STEP 11: STOP
 
 
 
 
 
 CHECKOUT()
-STEP 1: Start
+STEP 1: START
 STEP 2: FINALISE PRODUCTS
 STEP 3: INPUT local_adrs, pin, cntry, cntct_no
 STEP 4: IF pin, cntry, cntct_no ARE NOT VERIFIED THEN GOTO STEP 3
@@ -57,43 +57,43 @@ STEP 9: IF MODE OF PAYMENT IS COUPONS THEN GOTO STEP 10
 STEP 10: INPUT coupon_no, coupon_name
 STEP 11: IF DETAILS NOT VERIFIED THEN GOTO STEP 5STEP 12: CUNDUCT TRANSACTION
 STEP 13: SEND CUSTOMER TRANSACTION DETAILS VIA EMAIL 
-STEP 14: Stop
+STEP 14: STOP
  
 
 
 
 PSEUDOCODE
 MAIN
- Begin
+ BEGIN
   PRODUCT_SEARCH()
   Get Product
- Stop
+ STOP
  
 
 
 
 
 PRODUCT_SEARCH() 
-Begin
-  Varchar PRODUCT_NAME, CH
+BBEGIN
+  Varchar product_name, CH
   F:
-  do
-   Write " Input Product name:"
-   Read PRODUCT_NAME
+  DO
+   WRITE " Input Product name:"
+   Read product_name
    Search for Product in inventory
-   If Product found
-    Write PRODUCT_NAME, MODELNO, PRICE, STOCK
-    If STOCK<>0 AND Purcase is feasible
+   IF Product found
+    WRITE product_name, model_no, price, stock
+    IF STOCK<>0 AND Purcase is feasible
      Add product to cart
    End if 
-  Else
+  ELSE
    Goto F
-  End if  
+  END IF 
   Write " Add annother product?(y/n)"
   Read CH
- while(CH<>'n' OR CH<>'N')LOGIN()
+ WHILE(CH<>'n' OR CH<>'N')LOGIN()
  LOGIN()
-End
+END
 
 
 
@@ -102,55 +102,55 @@ End
 LOGIN()
 Begin 
  Varchar EMAIL_ID, ID, PASS, NAME, DOB, AGE, ADDRESS, MOOBILENO
- If customer has account
+ IF customer has account
   E:
   Read ID, PASS
-  If ID==LOGIN_ID AND PASS==LOGIN_PASS
+  IF ID==LOGIN_ID AND PASS==LOGIN_PASS
    CHECKOUT()
-  Else
+  ELSE
     Read EMAIL_ID
-    If EMAIL_ID present in database
+    IF EMAIL_ID present in database
      Send LOGIN_PASS to Email address
     Goto E
-   End if 
-  End if 
-Else
+   END IF 
+  END IF 
+ELSE
  G:
    Read NAME, DOB, AGE, ADDRESS, MOOBILENO, LOGIN_ID, LOGIN_PASS, EMAIL_ID
-   If LOGIN_ID already present in database
+   IF LOGIN_ID already present in database
     Goto G
-   Else
+   ELSE
     Create new account and store details in database
     Email Login link
     Goto E
-   End if 
-  End if 
- End
+   END IF 
+  END IF 
+ END
 
 
 
 
 
 CHECKOUT()
-Begin
+BEGIN
  Finalise Products
 I:
-Read LOCAL_ADRS, PINCODE, CNTRY, CONTACT_NO
-If PIN, CNTRY, CONTACT_NO ARE VERIFIED
+Read local_adress, Pin_code, Cntry, contact_no
+IF pin, cntry, contact_no ARE VERIFIED
  H:
- If mode of payment is CARD
-   Read CARD_NO, CARD_NAME, CVC, EXP_DATE, PIN
- Else if mode of payment is PAYPAL
+ IF mode of payment is card
+   Read card_no, card_name, cvc, exp_date, pin
+ ELSE IF mode of payment is PAYPAL
  
-   Read PAYPAL_ID, PAYPAL_PASS
- Else if mode of payment is COUPONS
-   Read COUPON_NO, COUPON_NAME
- End else if 
- If details veried
-   Conduct Transacon
+   Read paypal_id, paypal_pass
+ ELSE IF mode of payment is COUPONS
+   Read coupon_number, coupon_name
+ END ELSE IF 
+ IF details veried
+   Conduct Transaction
    Email Customer transaction details
- Else
+ ELSE
    goto H
- Else
+ ELSE
    Goto I
-End
+END
