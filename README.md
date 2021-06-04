@@ -1,0 +1,2 @@
+# Group-47-ICG
+Ayesha beauty salon we  are making an application that will allow people to register to the beauty store hence joining the community of Ayesha Beauty Creation. The application will help customers to talk to the business employees on the different ideas they have on what could be used as ingredients to beauty products thus increasing customer intimacy. The app will also allow the customers to comuncicate to each other  and discuss.In addition, the customers will be able to place orders and pay online.
